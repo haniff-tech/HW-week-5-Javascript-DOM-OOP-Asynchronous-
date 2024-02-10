@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Registrasi</title>
+    <link rel="stylesheet" href="output.css" />
+    <script defer src="script.js"></script>
+    <style>
+      table, th, td {
+        border:1px solid black;
+      }
+      </style>
+  </head>
+  <body style="padding: 10px">
+    <h1>Form Registrasi</h1>
+
+    <form id="form_register">
+      <div class="nama">
+        <p>Nama:</p>
+        <div id="nama_error"></div>
+        <input
+          type="text"
+          id="nama_input"
+          placeholder="Minimal 10 karakter"
+          required
+          name="nama"
+        />
+      </div>
+      <br />
+      <div class="umur">
+        <p>Umur :</p>
+        <div id="umur_error"></div>
+        <input
+          type="number"
+          id="umur_input"
+          placeholder="Minimal 25"
+          name="umur"
+          required
+        />
+      </div>
+      <br />
+      <div class="uang-sangu">
+        <p>Uang Sangu :</p>
+        <div id="uangSangu_error"></div>
+        <input
+          type="number"
+          id="uangSangu_input"
+          placeholder="Min 100rb - max 1jt"
+          name="uangSangu"
+          required
+        />
+      </div>
+      <br />
+      <br />
+      <button id="submit_button">Submit</button>
+      <button id="button_list_pendaftar">List Pendaftar</button>
+    </form>
+
+    <div id="pendaftar" style="display: none;" >
+        <table>
+            <thead>
+                <tr>
+                    <th>NAMA</th>
+                    <th>UMUR</th>
+                    <th>UANG SANGU</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <br>
+        <label>Resume</label>
+        <br>
+        <label id="resume"></label>
+        <br>
+      <button id="back_to_main">Kembali</button>
+    </div>
+  </body>
+</html>
